@@ -1,0 +1,14 @@
+**重要前提**: 在开始编码之前，请务必仔细阅读当前目录下克隆的 `DeOldify` 代码仓库根目录中的 `README.md` 文件。理解其功能、用法、依赖项和示例对于成功完成任务至关重要。
+
+任务: 请使用当前工作目录中的 DeOldify 库代码，将 ./input/bw_image.jpg 这张黑白老照片进行着色修复，使其色彩丰富。将着色后的图片保存在 ./output/bw_image_colorized.jpg 文件中。
+
+目录约定:
+- 输入文件位于: ./input/bw_image.jpg
+- 输出文件应保存到: ./output/bw_image_colorized.jpg
+
+你需要在 DeOldify 库代码中进行必要的修改或调用以完成着色任务，并确保安装所有必需的依赖项。
+
+重要提示: 请绝对不要修改 colorfulness_evaluator.py 文件。它是一个外部评估工具，仅用于验证结果。
+
+完成后，需要通过以下测试命令验证结果:
+`python colorfulness_evaluator.py ./output/bw_image_colorized.jpg --threshold 35`

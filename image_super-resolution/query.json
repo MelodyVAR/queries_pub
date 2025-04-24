@@ -1,0 +1,15 @@
+{
+    "query": "使用当前目录下的 image-super-resolution 代码将 `./input/low_res_image.jpg` 转换为高分辨率图片，并保存到 `./output/high_res_image.png`。",
+    "Tools": ["idealo/image-super-resolution"],
+    "Test": "python ./test_script.py --input_dir ./input --output_dir ./output",
+    "Repo_urls": [
+        "https://github.com/idealo/image-super-resolution"
+    ],
+    "Repo_paths": [
+        "./image-super-resolution"
+    ],
+    "Metrics": [
+        "PSNR ≥ 28.0",
+        "SSIM ≥ 0.90"
+    ]
+} 

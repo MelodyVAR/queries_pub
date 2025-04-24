@@ -1,0 +1,13 @@
+{
+  "name": "image_scratch_removal",
+  "prompt_path": "prompt.md",
+  "sandbox_path": "Bringing-Old-Photos-Back-to-Life",
+  "entry_point": "python test_script.py",
+  "ground_truth": {
+    "files": [
+      "output/restored_photo.png"
+    ],
+    "evaluation_script": "python test_script.py --check-only"
+  },
+  "description": "使用 Bringing-Old-Photos-Back-to-Life 库修复带有划痕的老照片。"
+} 

@@ -1,0 +1,7 @@
+{
+    "task_type": "speech_separation_denoising",
+    "tool": "SpeechBrain",
+    "input_file": "input/mixed_input.wav",
+    "output_dir": "pred_audio/",
+    "ref_dir": "ref_audio/"
+} 

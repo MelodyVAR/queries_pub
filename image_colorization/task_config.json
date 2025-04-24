@@ -1,0 +1,3 @@
+{
+  "install_cmd": "pip install scikit-image opencv-python pytorch-fid"
+} 

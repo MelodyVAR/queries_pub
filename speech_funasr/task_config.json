@@ -1,0 +1,7 @@
+{
+    "task_type": "speech_separation_recognition",
+    "tool": "FunASR",
+    "input_audio_file": "input/merged_audio.wav",
+    "output_transcription_file": "system_transcription.txt",
+    "ground_truth_file": "ground_truth.txt"
+} 

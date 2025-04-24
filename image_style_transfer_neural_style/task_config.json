@@ -1,0 +1,3 @@
+{
+  "install_cmd": "pip install torch torchvision numpy Pillow scikit-image"
+} 

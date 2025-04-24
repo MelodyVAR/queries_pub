@@ -1,0 +1,9 @@
+{
+  "query": "编写一个Python脚本，使用谱减法或预训练模型对WAV音频文件进行降噪处理。",
+  "Tools": ["python", "scipy", "numpy", "soundfile", "librosa", "torch", "speechbrain"],
+  "Test": "python denoise_script.py --input ./input/noisy_audio.wav --output ./output/denoised_audio.wav",
+  "Repo_urls": [],
+  "Metrics": [
+    "信噪比 (SNR) 提升 > 5 dB"
+  ]
+} 

@@ -1,0 +1,14 @@
+{
+    "query": "使用 Bringing-Old-Photos-Back-to-Life 库修复带有划痕的老照片。",
+    "Tools": ["microsoft/Bringing-Old-Photos-Back-to-Life"],
+    "Test": "python ./test_script.py",
+    "Repo_urls": [
+        "https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life"
+    ],
+    "Repo_paths": [
+        "Bringing-Old-Photos-Back-to-Life"
+    ],
+    "Metrics": [
+        "视觉检查：输出图片应显著减少或消除原始划痕，且不引入明显的人工痕迹。"
+    ]
+} 

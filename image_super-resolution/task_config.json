@@ -1,0 +1,9 @@
+{
+    "task_id": "image-super-resolution",
+    "category": "图像",
+    "model_repo": "idealo/image-super-resolution",
+    "metrics": [
+        "PSNR ≥ 28.0（行业恢复质量基准）",
+        "SSIM ≥ 0.90（结构相似度阈值）"
+    ]
+} 

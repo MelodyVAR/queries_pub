@@ -1,0 +1,8 @@
+{
+    "Task Name": "图像动漫风格转换",
+    "Task Description": "使用 AnimeGANv3 将图像转换为动漫风格。",
+    "Input": "一张指定图片（常见图片储存格式）所在的文件夹，确定shinkai动漫风格",
+    "Output": "风格转换后的确定照片所在的文件夹",
+    "Parameters": "输入输出照片的地址",
+    "Repo": "https://github.com/TachibanaYoshino/AnimeGANv3"
+} 

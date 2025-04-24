@@ -1,0 +1,8 @@
+{
+    "task_id": "transparent-background",
+    "category": "图像",
+    "model_repo": "https://github.com/plemeri/transparent-background",
+    "metrics": [
+        "Colorfulness ≥ 20.0：处理前后后图像的色彩丰富度差值至少为 20，表明前景色彩显著丰富"
+    ]
+} 

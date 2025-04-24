@@ -1,0 +1,15 @@
+{
+    "query": "使用当前目录下的 AnimeGANv3 代码将 `./input/real_image.jpg` 转换为动漫风格，并保存到 `./output/anime_image.png`。",
+    "Tools": ["TachibanaYoshino/AnimeGANv3"],
+    "Test": "python ./test_script.py ./input/AnimeGANv3_input.png ./output/anime_image.png",
+    "Repo_urls": [
+        "https://github.com/TachibanaYoshino/AnimeGANv3"
+    ],
+    "Repo_paths": [
+        "./AnimeGANv3"
+    ],
+    "Metrics": [
+        "视觉检查：输出图片应明显呈现动漫艺术风格。",
+        "LPIPS (vgg) 距离：使用 test_script.py 计算生成图与原图的 LPIPS 距离，判断风格化程度。"
+    ]
+} 

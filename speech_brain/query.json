@@ -1,0 +1,10 @@
+{
+    "query": "使用SpeechBrain对嘈杂语音进行说话人分离",
+    "Tools": ["SpeechBrain"],
+    "Test": "python separation_evaluate.py \\n  --reference_dir ./ref_audio/ \\n  --estimated_dir ./pred_audio/ \\n  --snr_threshold 12.0 \\n  --sdr_threshold 8.0",
+    "Repo_urls": ["https://github.com/speechbrain/speechbrain"],
+    "Metrics": [
+        "SNR ≥ 12 dB（降噪质量基准）",
+        "SDR ≥ 8 dB（说话人分离质量基准）"
+    ]
+} 

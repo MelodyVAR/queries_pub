@@ -1,0 +1,12 @@
+{
+    "query": "对给定的一个两人说话的音频（存在说话音重叠），进行说话人分离和实时转写",
+    "Tools": ["FunASR"],
+    "Test": "python evaluate_transcription.py \\n  --system_output system_transcription.txt \\n  --ground_truth ground_truth.txt \\n  --cer_threshold 0.05",
+    "Repo_urls":  ["https://github.com/modelscope/FunASR"],
+   "Repo_paths": [
+         "./data/path/FunASR"
+    ],
+    "Metrics": [
+        "CER ≤ 5%（中文场景字符错误率）"
+    ]
+} 

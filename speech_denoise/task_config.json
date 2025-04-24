@@ -1,0 +1,6 @@
+{
+  "task_type": "speech_denoising",
+  "tools": ["scipy", "numpy", "soundfile", "librosa", "torch", "speechbrain"],
+  "input_file": "input/noisy_audio.wav",
+  "output_file": "output/denoised_audio.wav"
+} 

@@ -1,0 +1,7 @@
+{
+    "Dependencies": [
+        "pip install torch torchvision lpips opencv-python numpy"
+    ],
+    "Notes": "需要在issue中找到一个模型的下载地址，readme中没有写；仓库会批量处理文件夹下的所有文件，prompt给定输入输出时候要注意",
+    "Estimate Time": "3小时"
+} 

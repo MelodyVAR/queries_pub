@@ -1,0 +1,8 @@
+{
+    "Task Name": "图像高清超分辨率",
+    "Task Description": "使用 image-super-resolution 模型将低分辨率图像提升为高分辨率图像。",
+    "Input": "包含一张或多张低分辨率图片的文件夹路径。",
+    "Output": "保存生成的高分辨率图片的文件夹路径。",
+    "Parameters": "输入文件夹路径、输出文件夹路径。",
+    "Repo": "https://github.com/idealo/image-super-resolution"
+} 

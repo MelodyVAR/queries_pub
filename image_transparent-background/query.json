@@ -1,0 +1,14 @@
+{
+  "query": "使用当前目录下的 transparent-background 代码移除 `./input/image_with_bg.jpg` 的背景，并保存到 `./output/image_no_bg.png`。",
+  "Tools": ["plemeri/transparent-background"],
+  "Test": "python ./test_script.py --input_image ./input/image_with_bg.jpg --output_image ./output/image_no_bg.png",
+  "Repo_urls": [
+    "https://github.com/plemeri/transparent-background"
+  ],
+  "Repo_paths": [
+    "./transparent-background"
+  ],
+  "Metrics": [
+    "Colorfulness difference ≥ 20.0"
+  ]
+} 
