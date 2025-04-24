@@ -1,11 +1,50 @@
 # Prompt for SpeechBrain Speaker Separation and Denoising Task
 
-Please write a Python script using the SpeechBrain library to perform speaker separation and denoising on the mixed audio file `input/mixed_input.wav`.
+**任务目标:** 编写一个 Python 脚本，使用 `SpeechBrain` 库对混合音频文件 (`./input/mixed_input.wav`) 进行说话人分离和降噪处理。
 
-Requirements:
-- Input: The script should specifically process the file located at `input/mixed_input.wav`.
-- Output: Save the separated and denoised audio streams for each speaker into separate `.wav` files within the `pred_audio/` directory. Ensure this directory is created if it doesn't exist.
-- Method: Utilize a pre-trained SpeechBrain model suitable for joint separation and denoising (e.g., SepFormer + enhancement model if available, or a specific separation model followed by a denoiser).
-- The script should accept the input file path (`input/mixed_input.wav`) and output directory path (`pred_audio/`) as command-line arguments, although the prompt specifies the exact paths to use for this task.
-- Ensure the script handles potential errors, such as file not found or issues during model loading/inference.
-- The reference audio files for evaluation are located in `ref_audio/`. 
+**核心前提:**
+1.  **理解 SpeechBrain:** 需要对 `SpeechBrain` 库有基本了解，特别是其在语音分离 (Speaker Separation) 和语音增强/降噪 (Speech Enhancement/Denoising) 方面的功能和预训练模型。查阅其官方文档或示例会很有帮助。
+2.  **预训练模型:** 需要选择并使用 `SpeechBrain` 提供的适用于**联合**说话人分离和降噪的预训练模型。如果找不到联合模型，可以考虑先使用分离模型，再对分离出的音频使用降噪模型。
+3.  **强制使用指定库:** 必须使用任务指定的 `SpeechBrain` 库。如果因任何原因无法使用该库（例如安装困难、模型下载失败、运行错误等），则应停止任务，而不是尝试使用其他库或方法编写脚本。
+
+**通用环境配置方法论:**
+1.  **确认工作目录:** 确保在正确的项目根目录下执行所有命令。
+2.  **检查代码库/安装库:** 确认任务指定的库 (`SpeechBrain`) 已经通过 `pip install speechbrain` 或类似方式安装到当前 Python 环境中，或者其代码库存在于本地（如果需要从源码运行）。
+3.  **依赖安装:**
+    *   `SpeechBrain` 的安装通常会处理其核心依赖。但仍需检查其文档，确认是否有额外的依赖项（例如特定功能或模型可能需要）。
+    *   强烈建议创建并激活一个独立的虚拟环境 (使用 `conda` 或 `python -m venv`) 来安装依赖。
+    *   确保主要框架 (PyTorch) 版本与 `SpeechBrain` 兼容。
+4.  **模型下载:**
+    *   `SpeechBrain` 通常会在首次使用预训练模型时自动下载。但需确保网络连接正常，且有权限写入缓存目录 (通常在 `~/.cache/huggingface/` 或 `~/.cache/speechbrain/`)。
+    *   如果需要手动下载，请遵循文档指示。
+5.  **验证安装:** (可选但推荐) 运行 `SpeechBrain` 官方文档中的简单示例代码，验证库是否安装成功且模型能正常加载。
+
+**脚本实现要求:**
+1.  **功能:**
+    *   加载指定的预训练模型 (通过 `from_hparams` 等方法)。
+    *   读取输入音频文件 (`./input/mixed_input.wav`)。
+    *   使用模型对输入音频进行处理，分离出不同的说话人，并对每个说话人的音频进行降噪。
+    *   将处理后每个说话人的音频流分别保存为 `.wav` 文件到输出目录 (`./pred_audio/`)。
+2.  **输入/输出:**
+    *   **固定输入文件:** 脚本应直接处理 `./input/mixed_input.wav` 文件。
+    *   **固定输出目录:** 处理结果应保存在 `./pred_audio/` 目录下。脚本需要确保在保存前该目录存在（如果不存在则创建）。输出文件名可以根据分离出的说话人编号命名，例如 `speaker1.wav`, `speaker2.wav` 等。
+    *   **(可选命令行参数):** 虽然本次任务固定了输入输出路径，但良好的实践是让脚本能通过命令行参数接收输入文件路径和输出目录路径。例如: `python your_script.py --input_wav ./input/mixed_input.wav --output_dir ./pred_audio/`
+3.  **依赖与环境:**
+    *   脚本应包含必要的 `import` 语句 (如 `speechbrain`, `torch`, `torchaudio`, `os` 等)。
+    *   确保运行脚本的环境已安装 `SpeechBrain` 及其所有依赖项，且环境配置正确。
+4.  **错误处理:**
+    *   加入基本的错误处理机制，例如处理文件未找到、模型加载失败或处理过程中发生的异常。
+5.  **代码风格:**
+    *   编写清晰、可读性好的 Python 代码，添加适当的注释。
+
+**验证:**
+*   脚本执行完毕后，`./pred_audio/` 目录应包含分离并降噪后的音频文件。
+*   (注意：该任务目录下的 `test_script.py` 可能用于评估生成结果，请了解其用途，但不要修改它。)
+
+**文件路径约定:**
+-   **输入混合音频:** `./input/mixed_input.wav`
+-   **输出分离/降噪音频目录:** `./pred_audio/`
+-   **参考音频 (用于评估):** `./ref_audio/`
+-   **库:** `SpeechBrain` (应安装在环境中)
+
+请根据以上要求编写 Python 脚本。 
